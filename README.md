@@ -1,2 +1,1 @@
-# Ethical-Hacking-Bootcamp
-Resources for my hackin' journey...
+# The Cybersecurity Bootcamp

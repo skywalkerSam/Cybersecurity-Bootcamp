@@ -2,7 +2,7 @@
 
 ## Terminal
 - Get shit done without any bs!
-- Type `exit` to exit the terminal ;)
+- Enter `exit` to exit the terminal anytime ;)
 
 ## Shell
 - Works between the terminal and OS's kernel (like an API to the kernel)
@@ -12,8 +12,9 @@
 - fish
 - C Shell ( csh )
 
-## Navigation
+![Linux in a nutshell](./linux_in_a_nutshell.jpg)
 
+## Navigation
 `List` items
 ```shell
 ls
@@ -22,96 +23,96 @@ ls
 ls -al
 ```
 
-print `working directory`
+## `print working directory`
 
 ```shell
 pwd
 ```
 
-`Tip:` It's case-sensitive!
+## `Tips:` 
+- It's case-sensitive!
+- use `TAB` to auto-complete!
 
-![](./cd_downloads.jpg "cd downloads result")
-
-`Change` Directory
+## `Change` Directory
 ```shell
 cd Downloads
 ```
 
-Tip: use `TAB` to auto-complete!
+![cd downloads result](./cd_downloads.jpg)
 
-`Move` Directory
+## `Move` Directory
 ```shell
 mv move_this_directory to_this_directory
 ```
 
-`Undo` one directory
+## `Go back` one directory
 ```shell
 cd ..
 ```
 
-Go `home`
+## Go `home`
 ```shell
 cd
 ```
 
 # Files & Directories `Management`
 
-`Create` a file
+## `Create` a file
 ```shell
 touch file_name.extension
 ```
 
-Create a `Directory`
+## Create a `Directory`
 ```shell
 mkdir directory_name
 ```
 
-print `file contents`
+## print `file contents`
 ```shell
 cat file_name.extension
 ```
 
-`Write & Save` to a new file
+## `Write & Save` to a new file
 ```shell
 echo "Write something here" > file_name.extension
 ```  
 
-Write & Save to an `existing file`
+## Write & Save to an `existing file`
 ```shell
 echo "Write something here" >> file_name.extension
 ```  
 
-`Move` a file
+## `Move` a file
 ```shell
 mv this_file.extension to_this_directory/
 ```   
 
-Move a `Directory`
+## Move a `Directory`
 ```shell
 mv this_directory to_this_directory/
 ```   
 
-`Copy` a file's contents to another file
+## `Copy` a file's contents to another file
 ```shell
 cp this_file.extension to_this_file.extension
 ```
 
-`Copy` a file's contents to another Directory's File
+## `Copy` a file's contents to another Directory's File
 ```shell
 cp this_file.extension to_this_directory/then_to_this_file.extension
 ```
 
-`Remove` a file
+## `Remove` a file
 ```shell
 rm file_name.extension
 ```
 
-`Remove` a Directory
+## `Remove` a Directory
 ```shell
 rm -r directory_name
 ```
 
-`Remove Everything` from the current directory
+## `Remove Everything` from the current directory
 - `Be careful` while using this one!
 - Never run this command on `root` ( / ) or, it'll destroy the entire operating system!
 
@@ -120,7 +121,7 @@ rm -r *
 ```
 
 
-## Nano
+# Nano
 ```shell
 nano file_name.extension
 ```
@@ -138,17 +139,17 @@ vim file_name.extension
 - `:wq` to Write & Quit
 - `:q` to Quit
 
+![Choosing an Editor](./choosing_an_editor.jpg)
 
-## Network Management
+# Network Management
+- press `q` to quit or, `CTRL + C` to cancel.
 
-- press `q` to quit
-
-Network `Status`
+## Network `Status`
 ```shell
 networkctl status
 ```
 
-`Networks, IP & MAC` info...
+## `Networks, IP & MAC` info...
 - Requires `net-tools`
 ```shell
 ifconfig
@@ -160,64 +161,73 @@ networkctl status
 ip route
 ```
 
-## Firewall
+# Firewall
 - `ufw`
 
-Firewall `Manual Page`
+## `Manual Page`
 ```shell
-sudo ufw list
+man ufw
 ```
-`Enable Firewall`
+```shell
+ufw --help
+```
+## `Enable Firewall`
 ```shell
 sudo ufw enable
 ```
-`Firewall Status`
+## `Firewall Status`
 ```shell
 sudo ufw status
 ```
-`Allow` permission to a port
+## `Allow` permission to a port
 ```shell
 sudo ufw allow port_number
 ```
 
-## SSH
+![Firewall in a nutshell](./firewall.jpg)
 
+## ;)
+
+# SSH
 - Connect to a system/server through `ssh`
 - Replace `192.168.0.103` with your `Server's IP`
 ```shell
-ssh username@192.168.0.103
+ssh username@your_server_ip
+```
+```shell
+ssh sam@192.168.0.103
 ```
 
-Allow SSH's `port 22` to start listening for incoming connections 
+## Allow SSH's `port 22` to start listening for incoming connections 
 - if you're using a firewall that is, `ufw`
 ```shell
 sudo ufw allow 22
 ```
 
-## Installing external packages
-- Using `APT` on `Debian/Ubuntu` System
+# Installing external packages: `APT`
+- `Debian/Ubuntu` Systems
 
-`Search` for a package
+## `Search` for a package
 ```shell
 sudo apt search package_name
 ```
 
-`Install` a package
+## `Install` a package
 ```shell
 sudo apt install package_name
 ```
 
-`Remove` a package
+## `Remove` a package
 ```shell
 sudo apt remove package_name
 ```
 
-Remove `unnecessary/cached` packages
+## Remove `unnecessary/cached` packages
 ```shell
 sudo apt autoremove
 ```
 
-Some popular `packages`
+## Some useful `packages`
 - htop
 - bpytop
 - neofetch
@@ -255,9 +265,11 @@ Some popular `packages`
 - sl ( Train Animation! )
 - docker
 
-## Installing from `snap`
+![What you see isn't all there is](./what_you_see_isnt_all_there_is_.jpg)
 
-`Install` a package
+# Installing from `snap`
+
+## `Install` a package
 - Use `--classic` if required...
 ```shell
 sudo snap install package_name
@@ -266,72 +278,118 @@ sudo snap install package_name
 sudo snap install package_name --classic
 ```
 
-`Remove` a package
+## `Remove` a package
 ```shell
 sudo snap remove package_name
 ```
 
-Some popular `snap-packages`
+## Some useful `snap-packages`
 - code  (VS Code)
 - chromium
 - spotify
 - microk8s
 
 
-## Installing from a `.deb` package
+# Installing a `.deb` package
+- `Debian/Ubuntu` Systems
 
-Give the package `executable` permission
+## Give a package `executable` permission
 ```shell
-sudo chmod +x package_name
+chmod +x package_name
 ```
-`Install` the package
+## `Install` a package
 ```shell
-sudo apt install ./package_name
+sudo apt install ./package_name.deb
 ```
 
-## Installing through `pacman`
+# Introduction to `pacman`
 - `Arch` based systems
+- `AUR` is also a good way to install packages on Arch Systems
 
-`Install` a package
+![I use Arch btw](./i_use_arch_btw.jpg)
+
+## `Update & Upgrade` the system
 ```shell
-
+sudo pacman -Syu
 ```
 
-`Remove` a package
+## `Install` a package
 ```shell
+sudo pacman -Sy package_name
+```
+```shell
+sudo pacman -S package_name
+```
 
+## `Remove` a package
+```shell
+sudo pacman -R package_name
+```
+
+## `Remove` a package along with its dependencies
+```shell
+sudo pacman -Rs package_name
 ```
 
 
 
-## Installing through `dnf`
+
+# Installing through `DNF`
 - `Fedora` based systems ( Red Hat, RHEL )
+- Successor to `YUM`
 
-`Install` a package
+## `Update & Upgrade` the system
 ```shell
-
+sudo dnf update
+```
+```shell
+sudo dnf upgrade
 ```
 
-`Remove` a package
+## `Search` a package
 ```shell
+dnf search package_name
+```
+## `Install` a package
+```shell
+sudo dnf install package_name
+```
+## `Remove` a package
+```shell
+sudo dnf remove package_name
+```
+## Clear package cache
+```shell
+sudo dnf autoremove
+```
 
+# Installing a `.rpm` package
+- `Fedora/RHEL` Systems
+
+## Give a package `executable` permission
+```shell
+chmod +x package_name
+```
+## `Install` the package
+```shell
+sudo dnf install ./package_name.rpm
 ```
 
 
 
-## System Management
+# System Management
 
-`Date & Time` of the system
+## `Date & Time` of the system
 ```shell
 date
 ```
 
-`Uptime` of the System
+## `Uptime` of the System
 ```shell
 uptime
 ```
 
-`Reboot`
+## `Reboot`
 ```shell
 reboot
 ```
@@ -339,7 +397,7 @@ reboot
 sudo reboot
 ```
 
-`Power Off / Shutdown`
+## `Power Off / Shutdown`
 ```shell
 poweroff
 ```
@@ -347,35 +405,41 @@ poweroff
 sudo poweroff
 ```
 
-Run previous command with `superuser`
+## Run previous command with `superuser`
 ```shell
 sudo !!
 ```
 
-`Update` the system
+## `Update` the system
 ```shell
 sudo apt update
 ```
 
-`Upgrade` the system
+## `Upgrade` the system
 ```shell
 sudo apt upgrade
 ```
 
-Update & Upgrade the system
+## `Update & Upgrade` the system
+- Use `-y` for auto-confirmation
+
 ```shell
 sudo apt update ; sudo apt upgrade
 ```
 
-`Switch` to superuser
+```shell
+sudo apt update ; sudo apt upgrade -y
+```
 
-![](./with_great_power_comes_great_responsibility.jpg "the_responsibility")
+# `Switch` to superuser
+
+![the responsibility](./with_great_power_comes_great_responsibility.jpg)
 
 ```shell
 sudo su
 ```
 
-System `status`
+## System `status`
 
 - press `q` to quit
 
@@ -383,17 +447,17 @@ System `status`
 systemctl status
 ```
 
-`Time & Date` Status
+## `Time & Date` Status
 ```shell
 timedatectl status
 ```
 
-`System` information
+## `System` information
 ```shell
 uname -a
 ```
 
-## Disks
+# Disks
 
 - Use `Disks` application for disk management   ( GUI )
 
@@ -404,9 +468,9 @@ df -h
 lsblk
 ```
 
-`TIP:` Choose the disk's name carefully...!
+### `TIP:` Choose the disk's name carefully...!
 
-`Mount` a Disk
+## `Mount` a Disk
 ```shell
 sudo mkdir /mnt/external
 ```
@@ -414,36 +478,49 @@ sudo mkdir /mnt/external
 sudo mount /dev/sdX1 /mnt/external
 ```
 
-`Navigate` to the disk
+## `Navigate` to the disk
 ```shell
 cd /mnt/external
 ```
 
-`Unmount` the disk
+## `Unmount` the disk
 ```shell
 umount /mnt/external
 ```
 
-`Auto-Mount` Functionality
+## `Auto-Mount` Functionality
 - Replace `ext4` with your disk format like... `ntfs` `btrfs` `exfat` `fat32` in the following...
 ```shell
 sudo vim /etc/fstab
 ```
-Write the follwing inside the file...
+## Write the follwing inside the file...
 ```shell
 /dev/sdX1 /mnt/external ext4 defaults 0 0
 ```
 
-# Additional Tips...
 
+
+# Additional Tips...
 - Use `TAB` for auto-completion
 - press `CTRL + C` to cancel an ongoing operation
 - `CTRL + D` to quit
 - `CTRL + SHIFT + C` to copy something from the terminal
 - `CTRL + SHIFT + V` to paste something to the terminal
 
+# Stuck, `Need Help?`
+## Read the manual page of a command
+```shell
+man command
+```
+```shell
+man apt
+```
+## List of Main Commands:
+```shell
+command --help
+```
 
-## Format the System
+# Format the System
 Fuck the system beyond recovery unless, you're running `virtualbox` ;)
 
 - `Destroys` the entire Operating System!
@@ -452,10 +529,70 @@ sudo rm -rf /*
 
 ```
 
-![](./fear.jpg "Did you experience fear...?")
+![Did you experience fear?](./fear.jpg)
 
 Don't be, you'll get used to it...
 
 Take Care...
 
 ;)
+
+
+##
+##
+##
+
+# Introduction to `PowerShell`: winget
+- `Windows` Systems
+- It's like if `cmd` & `bash` had a child ;)
+- In a general sense, it's `not case-sensitive`!
+
+## Search a package
+```shell
+winget search package_name
+```
+```shell
+winget search vscode
+```
+
+## Install a package
+```shell
+winget install author.package_name
+```
+```shell
+winget install Microsoft.VisualStudioCode
+```
+
+### `Tip:` Smallcase works too...
+```shell
+winget install microsoft.visualstudiocode
+```
+
+## `Create` a file
+```shell
+ni file_name.extension
+```
+
+## `Remove` a file
+```shell
+rm file_name.extension
+```
+
+## `Create` a directory
+```shell
+mkdir directory_name
+```
+
+## `Remove` a directory
+```shell
+rm directory_name
+```
+
+## `Remove` a directory forcefully*
+```shell
+rm -r -fo directory_name
+```
+
+![Was the use of force necessary?](./use_of_force.jpg)
+
+# ;)

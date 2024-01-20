@@ -2,7 +2,7 @@
 
 ## Terminal
 - Get shit done without any bs!
-- Type `exit` to exit the terminal ;)
+- Enter `exit` to exit the terminal anytime ;)
 
 ## Shell
 - Works between the terminal and OS's kernel (like an API to the kernel)
@@ -12,8 +12,9 @@
 - fish
 - C Shell ( csh )
 
-## Navigation
+![Linux in a nutshell](./linux_in_a_nutshell.jpg)
 
+## Navigation
 `List` items
 ```shell
 ls
@@ -28,16 +29,16 @@ ls -al
 pwd
 ```
 
-### `Tip:` It's case-sensitive!
-
-![](./cd_downloads.jpg "cd downloads result")
+## `Tips:` 
+- It's case-sensitive!
+- use `TAB` to auto-complete!
 
 ## `Change` Directory
 ```shell
 cd Downloads
 ```
 
-### Tip: use `TAB` to auto-complete!
+![cd downloads result](./cd_downloads.jpg)
 
 ## `Move` Directory
 ```shell
@@ -138,6 +139,7 @@ vim file_name.extension
 - `:wq` to Write & Quit
 - `:q` to Quit
 
+![Choosing an Editor](./choosing_an_editor.jpg)
 
 # Network Management
 - press `q` to quit or, `CTRL + C` to cancel.
@@ -159,12 +161,15 @@ networkctl status
 ip route
 ```
 
-## # Firewall
+# Firewall
 - `ufw`
 
-## Firewall `Manual Page`
+## `Manual Page`
 ```shell
-sudo ufw list
+man ufw
+```
+```shell
+ufw --help
 ```
 ## `Enable Firewall`
 ```shell
@@ -179,12 +184,18 @@ sudo ufw status
 sudo ufw allow port_number
 ```
 
-# SSH
+![Firewall in a nutshell](./firewall.jpg)
 
+## ;)
+
+# SSH
 - Connect to a system/server through `ssh`
 - Replace `192.168.0.103` with your `Server's IP`
 ```shell
-ssh username@192.168.0.103
+ssh username@your_server_ip
+```
+```shell
+ssh sam@192.168.0.103
 ```
 
 ## Allow SSH's `port 22` to start listening for incoming connections 
@@ -254,6 +265,8 @@ sudo apt autoremove
 - sl ( Train Animation! )
 - docker
 
+![What you see isn't all there is](./what_you_see_isnt_all_there_is_.jpg)
+
 # Installing from `snap`
 
 ## `Install` a package
@@ -292,6 +305,8 @@ sudo apt install ./package_name.deb
 # Introduction to `pacman`
 - `Arch` based systems
 - `AUR` is also a good way to install packages on Arch Systems
+
+![I use Arch btw](./i_use_arch_btw.jpg)
 
 ## `Update & Upgrade` the system
 ```shell
@@ -418,7 +433,7 @@ sudo apt update ; sudo apt upgrade -y
 
 # `Switch` to superuser
 
-![](./with_great_power_comes_great_responsibility.jpg "the_responsibility")
+![the responsibility](./with_great_power_comes_great_responsibility.jpg)
 
 ```shell
 sudo su
@@ -483,6 +498,8 @@ sudo vim /etc/fstab
 /dev/sdX1 /mnt/external ext4 defaults 0 0
 ```
 
+
+
 # Additional Tips...
 - Use `TAB` for auto-completion
 - press `CTRL + C` to cancel an ongoing operation
@@ -512,7 +529,7 @@ sudo rm -rf /*
 
 ```
 
-![](./fear.jpg "Did you experience fear...?")
+![Did you experience fear?](./fear.jpg)
 
 Don't be, you'll get used to it...
 
@@ -525,8 +542,10 @@ Take Care...
 ##
 ##
 
-# Introduction to PowerShell: `winget`
+# Introduction to `PowerShell`: winget
 - `Windows` Systems
+- It's like if `cmd` & `bash` had a child ;)
+- In a general sense, it's `not case-sensitive`!
 
 ## Search a package
 ```shell
@@ -548,3 +567,32 @@ winget install Microsoft.VisualStudioCode
 ```shell
 winget install microsoft.visualstudiocode
 ```
+
+## `Create` a file
+```shell
+ni file_name.extension
+```
+
+## `Remove` a file
+```shell
+rm file_name.extension
+```
+
+## `Create` a directory
+```shell
+mkdir directory_name
+```
+
+## `Remove` a directory
+```shell
+rm directory_name
+```
+
+## `Remove` a directory forcefully*
+```shell
+rm -r -fo directory_name
+```
+
+![Was the use of force necessary?](./use_of_force.jpg)
+
+# ;)
